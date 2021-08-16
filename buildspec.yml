@@ -31,7 +31,7 @@ phases:
     commands:
       - echo "check Repo"
       - echo $REPOSITORY_URI
-      - docker build -f Dockerfile -t theomueller/$REPOSITORY_URI:$TAG .
+      - docker build -f Dockerfile -t $REPOSITORY_URI:$TAG .
 
   post_build:
     commands:
