@@ -29,6 +29,8 @@ phases:
       - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
+      - echo "check Repo"
+      - echo $REPOSITORY_URI
       - docker build -f Dockerfile -t theomueller/$REPOSITORY_URI:$TAG .
 
   post_build:
